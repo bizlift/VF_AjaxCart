@@ -115,11 +115,14 @@ var AjaxCart = Class.create({
                 if (form) {
                     Event.stop(e);
                     var formData = '';
-                    if (el.value == 'empty_cart') {
-                        formData = 'update_cart_action=empty_cart';
-                    } else {
-                        formData = form.serialize();
-                    }
+                    var formKey = ''; 
+
+                    if (el.value == 'empty_cart') { 
+                        var formKey = $$('[name="form_key"]')[0].value; 
+                        formData = 'update_cart_action=empty_cart&form_key='+formKey; 
+                    } else { 
+                        formData = form.serialize(); 
+                    } 
 
                     if (_this.isLoading) {
                         return false;
