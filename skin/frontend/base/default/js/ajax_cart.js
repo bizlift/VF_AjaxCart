@@ -99,7 +99,7 @@ var AjaxCart = Class.create({
 
                     //if no cartTable and totals - update all (usually for empty cart)
                     if (!cartTableNew && !totalsNew) {
-                        var cart = $$('.cart').first();
+                        var cart = $$('.section-breadcrumb').first().next();
                         if (cart) {
                             cart.replace(response['custom_content_data']['checkout.cart']);
                         }
