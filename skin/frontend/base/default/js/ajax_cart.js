@@ -54,6 +54,10 @@ var AjaxCart = Class.create({
             }
             th.observe('click', function(e) {
                 Event.stop(e);
+
+                if (!productAddToCartForm.validator.validate()) {
+                    return;
+                }
                 var form = th.up('form');
                 var params = '';
                 if (form) {
