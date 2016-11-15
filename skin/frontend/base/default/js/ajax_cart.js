@@ -22,7 +22,7 @@
  */
 var AjaxCart = Class.create({
     buttonSelector: '.btn-cart',
-    sidebarCartSelector: '.block-cart',
+    sidebarCartSelector: '.cart-header',
     removeLinkSelector: 'a.btn-remove',
     cartPageSelector: '.checkout-cart-index',
     cartPageUpdateButtonsSelector: 'button[name=update_cart_action]',
