@@ -32,8 +32,8 @@ var AjaxCart = Class.create({
         this.isLoading = false;
 
         this._observeButtons();
-        this._observeSidebar();
-        this._observeCartPage();
+        //this._observeSidebar();
+        //this._observeCartPage();
     },
     _observeButtons: function() {
         var _this = this;
@@ -160,7 +160,7 @@ var AjaxCart = Class.create({
         var cartOld = $$(this.sidebarCartSelector).first();
         if (cartOld) {
             cartOld.replace(data);
-            this._observeSidebar();
+            //this._observeSidebar();
         }
     },
     _updateTopLinks: function(data) {
